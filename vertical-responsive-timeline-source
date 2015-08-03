@@ -1,0 +1,24 @@
+#123456 {
+    font-family: Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    background: blue;
+}
+
+/*div {
+  width: 500px;
+  margin: 20px auto;
+  padding: 50px;
+  border: solid blue 10px;
+  -webkit-box-sizing: border-box;
+
+}*/
+
+#cd-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 18px;
+  height: 100%;
+  width: 4px;
+  background: #d7e4ed;
+}
