@@ -1,4 +1,43 @@
+<<<<<<< HEAD
 #JYFall {
   background-color: red;
   margin-right: 20px;
+=======
+
+
+.nav a {
+  color: navy;
+  font-size: 15px;
+  font-weight: bolder;
+  padding: 20px 10px;
+}
+
+  .nav li {
+    display: inline;
+  }
+
+.jumbotron h1 {
+  color: white;
+  font-size: 49px;
+  font-family:sans-serif;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.jumbotron p {
+  font-size: 20px;
+  color: black;
+  font-family: sans-serif;
+
+}
+.founders {
+  text-align: center;
+  color: navy;
+
+
+}
+.aboutpage {
+  background-color: rgb(182,179, 254);
+>>>>>>> 7db22f199575ea98e38c2bf516b34be79da4f9eb
 }
