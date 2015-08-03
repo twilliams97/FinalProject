@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Timeline</title>
+  </head>
+  <body>
+    <h1>Welcome to your timeline</h1>
+
+    <div>
+      <a href="JuniorYearFall.hmtl">Junior Year - Fall</a>
+    </div>
+    <div>
+      Junior Year - Spring
+    </div>
+    <div>
+      Junior Year - Summer
+    </div>
+    <div>
+      Senior Year - Fall
+    </div>
+    <div>
+      Senior Year - Spring
+    </div>
+  </body>
+</html>
