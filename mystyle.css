@@ -1,4 +1,4 @@
-div {
+.season {
     font-family: Helvetica, Arial, sans-serif;
     box-sizing: border-box;
     background: blue;
@@ -15,14 +15,25 @@ div {
 }
 
 
-div.absolute {
+/*div.season {
     position: absolute;
     top: 80px;
     right: 0;
     width: 500px;
     height: 100px;
     border: 3px solid #8AC007;
-}
+    display: block;
+}*/
+/*div.season:nth-child(2) {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 500px;
+    height: 100px;
+    border: 3px solid #8AC007;
+    display: block;
+    float: right;
+}*/
 
 div.absolute12 {
     position: absolute;
@@ -31,4 +42,5 @@ div.absolute12 {
     width: 500px;
     height: 100px;
     border: 3px solid #8AC007;
+    display: block;
 }
