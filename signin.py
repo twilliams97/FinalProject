@@ -145,8 +145,8 @@ class TimelineHandler(webapp2.RequestHandler):
         template = JINJA_ENVIRONMENT.get_template('BeginningTimeline.html')
         self.response.out.write(template.render())
 app = webapp2.WSGIApplication([
-    ('/', TimelineHandler)
-    ('/about', MyHandler),
+    ('/', TimelineHandler),
+    ('/about', AboutHandler),
     ('/forum', ForumHandler),
     ('/comment', CommentHandler),
     # ('/SeniorYearSpring.html', TimelineHandler),
