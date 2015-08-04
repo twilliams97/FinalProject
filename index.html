@@ -41,6 +41,22 @@
 			<div class="cd-timeline-content">
 				<h2>Junior Year Spring</h2>
 				<p>Prepare for SAT</p>
+				<script>
+				$( "div.cd-container" ).hover(
+				  function() {
+				    $( this ).append( $( "<span> ***</span>" ) );
+				  }, function() {
+				    $( this ).find( "span:last" ).remove();
+				  }
+				);
+
+				// $( "div.fade" ).hover(function() {
+				//   $( this ).fadeOut( 100 );
+				//   $( this ).fadeIn( 500 );
+				});
+				</script>
+
+
 				<a href="#0" class="cd-read-more">Read more</a>
 				<span class="cd-date">Jan 14</span>
 			</div> <!-- cd-timeline-content -->

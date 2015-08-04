@@ -13,6 +13,14 @@ handlers:
   static_files: scholarshipstyle.css
   upload: favicon\.css
 
+- url: /reset\.css
+  static_files: reset.css
+  upload: favicon\.css
+
+- url: /style\.css
+  static_files: style.css
+  upload: favicon\.css
+
 - url: /.*
   script: signin.app
 
