@@ -77,7 +77,7 @@ class Comment(ndb.Model):
     date = ndb.DateTimeProperty(auto_now_add=True)
     # Your code goes here
 
-class MainHandler(webapp2.RequestHandler):
+class ForumHandler(webapp2.RequestHandler):
     def get(self):
         # Get all of the student data from the datastore
         query = Topic.query()
@@ -135,9 +135,19 @@ class ScholarshipHandler(webapp2.RequestHandler):
         template = JINJA_ENVIRONMENT.get_template('scholarships.html')
         self.response.out.write(template.render())
 
+class AboutHandler(webapp2.RequestHandler):
+    def get(self):
+        template = JINJA_ENVIRONMENT.get_template('about.html')
+        self.response.out.write(template.render())
+
+class TimelineHandler(webapp2.RequestHandler):
+    def get(self):
+        template = JINJA_ENVIRONMENT.get_template('BeginningTimeline.html')
+        self.response.out.write(template.render())
 app = webapp2.WSGIApplication([
-    # ('/', MyHandler),
-    ('/forum', MainHandler),
+    ('/', TimelineHandler)
+    ('/about', MyHandler),
+    ('/forum', ForumHandler),
     ('/comment', CommentHandler),
     # ('/SeniorYearSpring.html', TimelineHandler),
     ('/scholarships', ScholarshipHandler)
