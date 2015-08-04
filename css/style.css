@@ -31,11 +31,10 @@ img {
   max-width: 100%;
 }
 
-h1 {
+#title {
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
-  font-size: 800px;
-  text-decoration: underline;
+  font-size: 150px;
 }
 
 h2 {
