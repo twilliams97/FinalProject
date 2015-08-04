@@ -1,4 +1,4 @@
-/* -------------------------------- 
+/* --------------------------------
 
 Primary style
 
@@ -31,12 +31,18 @@ img {
   max-width: 100%;
 }
 
-h1, h2 {
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 800px;
+  text-decoration: underline;
+}
+
+h2 {
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
 }
-
-/* -------------------------------- 
+/* --------------------------------
 
 Modules - reusable parts of our design
 
@@ -54,9 +60,9 @@ Modules - reusable parts of our design
   clear: both;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-Main components 
+Main components
 
 -------------------------------- */
 header {
