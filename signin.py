@@ -142,8 +142,9 @@ class AboutHandler(webapp2.RequestHandler):
 
 class TimelineHandler(webapp2.RequestHandler):
     def get(self):
-        template = JINJA_ENVIRONMENT.get_template('BeginningTimeline.html')
+        template = JINJA_ENVIRONMENT.get_template('index.html')
         self.response.out.write(template.render())
+
 app = webapp2.WSGIApplication([
     ('/', TimelineHandler),
     ('/about', AboutHandler),
