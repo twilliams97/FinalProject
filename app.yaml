@@ -9,11 +9,15 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 
+- url: /scholarshipstyle\.css
+  static_files: scholarshipstyle.css
+  upload: favicon\.css
+
 - url: /.*
   script: signin.app
 
 libraries:
 - name: jinja2
-  version: latest  
+  version: latest
 - name: webapp2
   version: "2.5.2"
