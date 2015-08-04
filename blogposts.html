@@ -1,45 +1,31 @@
 <!DOCTYPE html>
-<head>
-  <link href="aboutstyle.css" type = "text/css" link rel = "stylesheet">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-  <title>Create a blog entry</title>
-
-</head>
-
+{% autoescape true %}
 <html>
   <body>
-    <div class="nav">
-      <div class="container">
-        <ul class="pull-left">
-          <li><a href="BeginningTimeline.html" >Home</a></li>
-          <li><a href= "scholarships.html">Scholarships</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href ="#"> Advice</a></li>
-          <li><a href="#">Sign Up/Login</a></li>
-        </ul>
+    <h2>Forum</h2>
+    {% for topic in topics %}
+      <h3>Title: {{ topic.title }}</h3>
+      <h5>{{ topic.date.strftime("%d/%m/%y") }}</h5>
+      <p>{{ topic.content }}</p>
+      {% for comment_key in topic.comment_keys %}
+        <h3>Commenter: {{ comment_key.get().author }}</h3>
+        <!-- <h5> comment_key.date.strftime("%d/%m/%y") }}</h5> -->
+        <p>{{ comment_key.get().comment }}</p>
+      {% endfor %}
+      <form action="/comment" method="post">
+        <div>Name: <input author="author"></input></div>
+        <div>Comment: <textarea comment="comment" rows="2" cols="40"></textarea></div>
+        <div><input type="hidden" name="topic_url_key" value="{{ topic.key.urlsafe() }}">
+        <div><input type="submit" value="Comment"></div>
+      </form>
+      <hr>
+    {% endfor %}
 
-        </ul>
-      </div>
-    </div>
-
-    <h1>Write your advice here!</h1>
-    <p> Have you become a pro at college applications? Do you want to share some of your knowledge? You have come to the right place. You can add your own
-      blog posts here. This is an advice column from students to students. </p>
-    <hr/>
-    <div>
-      <form method= "post" action ="/save">
-      <dl>
-        <dt>Title:<dt>
-        <dd><input type="text" name= "title_in_form"></dd>
-        <dt>Blog entry:<dt>
-        <dd><textarea name = "entry_in_form"></textarea></dd>
-      </dl>
-      <input type="submit">
+    <form action="/" method="post">
+      <div>Title: <input name="title"></input></div>
+      <div>Content: <textarea name="content" rows="3" cols="60"></textarea></div>
+      <div><input type="submit" value="Add Post"></div>
     </form>
-    </div>
-
-
-
-
-
+  </body>
 </html>
+{% endautoescape %}
