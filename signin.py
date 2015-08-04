@@ -86,7 +86,7 @@ class ForumHandler(webapp2.RequestHandler):
         template_values = {
             'topics' : topic_data
         }
-        template = JINJA_ENVIRONMENT.get_template('blogposts.html')
+        template = JINJA_ENVIRONMENT.get_template('forum.html')
         self.response.write(template.render(template_values))
 
     def post(self):
