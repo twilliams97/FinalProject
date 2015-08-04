@@ -132,13 +132,13 @@ class CommentHandler(webapp2.RequestHandler):
 
 class ScholarshipHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('scholarships.html')
+        template = JINJA_ENVIRONMENT.get_template('scholarships.html')
         self.response.out.write(template.render())
 
 app = webapp2.WSGIApplication([
-    ('/', MyHandler),
+    # ('/', MyHandler),
     ('/forum', MainHandler),
     ('/comment', CommentHandler),
-    ('/SeniorYearSpring.html', TimelineHandler),
+    # ('/SeniorYearSpring.html', TimelineHandler),
     ('/scholarships', ScholarshipHandler)
 ], debug=True)
