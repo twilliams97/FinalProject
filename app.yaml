@@ -9,6 +9,10 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 
+- url: /scholarshipstyle\.css
+  static_files: scholarshipstyle.css
+  upload: favicon\.css
+
 - url: /.*
   script: signin.app
 
