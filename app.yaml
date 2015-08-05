@@ -1,4 +1,4 @@
-application: signin
+application: main
 version: 1
 runtime: python27
 api_version: 1
@@ -16,7 +16,7 @@ handlers:
   static_dir: js
 
 - url: /.*
-  script: signin.app
+  script: main.app
 
 libraries:
 - name: jinja2

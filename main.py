@@ -85,11 +85,39 @@ class TimelineHandler(webapp2.RequestHandler):
         template = JINJA_ENVIRONMENT.get_template('index.html')
         self.response.out.write(template.render())
 
+class JYSHandler(webapp2.RequestHandler):
+    def get(self):
+        template = JINJA_ENVIRONMENT.get_template('junior_year_spring.html')
+        self.response.out.write(template.render())
+
+class SBSYHandler(webapp2.RequestHandler):
+    def get(self):
+        template = JINJA_ENVIRONMENT.get_template('summer_before_senior.html')
+        self.response.out.write(template.render())
+
+class SYFHandler(webapp2.RequestHandler):
+    def get(self):
+        template = JINJA_ENVIRONMENT.get_template('senior_year_fall.html')
+        self.response.out.write(template.render())
+
+class SYSHandler(webapp2.RequestHandler):
+    def get(self):
+        template = JINJA_ENVIRONMENT.get_template('senior_year_spring.html')
+        self.response.out.write(template.render())
+class SASYHandler(webapp2.RequestHandler):
+    def get(self):
+        template = JINJA_ENVIRONMENT.get_template('summer_after_senior_year.html')
+        self.response.out.write(template.render())
 app = webapp2.WSGIApplication([
     ('/', TimelineHandler),
     ('/about', AboutHandler),
     ('/forum', ForumHandler),
     ('/comment', CommentHandler),
+    ('/junioryearspring', JYSHandler),
+    ('/summerbeforesenioryear', SBSYHandler),
+    ('/senioryearfall', SYFHandler),
+    ('/senioryearspring', SYSHandler),
+    ('/summeraftersenioryear', SASYHandler),
     # ('/SeniorYearSpring.html', TimelineHandler),
     ('/scholarships', ScholarshipHandler)
 ], debug=True)
