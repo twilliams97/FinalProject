@@ -3,20 +3,25 @@
   font-size: 15px;
   font-weight: bolder;
   padding: 20px 10px;
+
 }
 
   .nav li {
     display: inline;
   }
 .aboutpage {
-  background-color: gray;
+  background-color: #75ce66;
+}
+
+#title {
+  color: black;
+
 }
 
 .jumbotron h1 {
-  color: white;
+
   font-size: 49px;
-  font-family:sans-serif;
-  font-weight: bold;
+  font-family: 'Merriweather' serif;
   text-align: center;
   text-decoration: underline;
 }
@@ -24,7 +29,7 @@
 .jumbotron p {
   font-size: 20px;
   color: white;
-  font-family: sans-serif;
+  font-family: 'Merriweather' serif;
 
 }
 

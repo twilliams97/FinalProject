@@ -9,34 +9,33 @@
     display: inline;
   }
 .aboutpage {
-  background-color: gray;
+  background-color: lightgreen;
 }
 
+/*#scholarship {
+  color: black;*/
+
 .jumbotron h1 {
-  color: white;
+  color: blue;
   font-size: 49px;
-  font-family:sans-serif;
-  font-weight: bold;
+  font-family: 'Questrial', sans-serif;
   text-align: center;
   text-decoration: underline;
 }
 
 .jumbotron p {
-  font-size: 20px;
+  font-size: 15px;
   color: white;
   font-family: sans-serif;
 
 }
 
-.founders {
-  text-align: center;
-  color: navy;
-  font-family: sans-serif;
-}
-
-.scholarshipstable {
+.scholarships {
   text-align: justify;
-  font-size: 35px;
-  font-family: inherit;
-  color: navy;
+  font-size: 15px;
+  font-family: 'Merriweather' serif;
+
+}
+.col-md-6 {
+  font-size: 20px
 }
