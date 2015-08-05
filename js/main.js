@@ -6,8 +6,33 @@ jQuery(document).ready(function($){
 	hideBlocks(timelineBlocks, offset);
 
 	//on scolling, show/animate timeline blocks when enter the viewport
+
+	$(document).ready(function(){
+	    $(".picture").hover(function(){
+	        $(this).attr("src", "img/cd-icon-location.svg");
+	        }, function(){
+	        $(this).attr("src", "img/cd-icon-picture.svg");
+	    });
+	});
+
+	$(document).ready(function(){
+	    $(".location").hover(function(){
+	        $(this).attr("src", "img/cd-icon-picture.svg");
+	        }, function(){
+	        $(this).attr("src", "img/cd-icon-location.svg");
+	    });
+	});
+
+	$(document).ready(function(){
+	    $("#final_paragraph").hover(function(){
+	        $(this).text("You're almost done!");
+	        }, function(){
+	        $(this).text("This is the content of the last section");
+	    });
+	});
+
 	$(window).on('scroll', function(){
-		(!window.requestAnimationFrame) 
+		(!window.requestAnimationFrame)
 			? setTimeout(function(){ showBlocks(timelineBlocks, offset); }, 100)
 			: window.requestAnimationFrame(function(){ showBlocks(timelineBlocks, offset); });
 	});

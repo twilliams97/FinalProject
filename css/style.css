@@ -13,6 +13,30 @@ html * {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+h1 {
+  font-size: 215px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -6px;
+  margin-bottom: 10px;
+  position: relative;
+  top: 30px;
+}
+
+#title12{
+  font-size: 150px;
+  background: url(http://trentwalton.com/bgclip/img/paint.png) repeat, white;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	-webkit-animation-name: masked-animation;
+	-webkit-animation-duration: 40s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+@-webkit-keyframes masked-animation {
+	0% {background-position: left bottom;}
+	100% {background-position: right bottom;}
+}
 
 body {
   font-size: 100%;
@@ -29,12 +53,6 @@ a {
 
 img {
   max-width: 100%;
-}
-
-#title {
-  font-family: "Open Sans", sans-serif;
-  font-weight: bold;
-  font-size: 150px;
 }
 
 h2 {
