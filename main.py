@@ -45,7 +45,7 @@ class ForumHandler(webapp2.RequestHandler):
         post = Post(title=title, content=content, author=author)
         post.put()
         # Redirect to the main handler that will render the template
-        self.redirect('/')
+        self.redirect('/forum')
 
 class CommentHandler(webapp2.RequestHandler):
     def post(self):
@@ -68,7 +68,7 @@ class CommentHandler(webapp2.RequestHandler):
         post.put()
 
 
-        self.redirect('/')
+        self.redirect('/forum')
 
 class ScholarshipHandler(webapp2.RequestHandler):
     def get(self):
