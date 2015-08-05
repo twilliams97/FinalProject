@@ -1,0 +1,14 @@
+.nav a {
+  color: navy;
+  font-size: 15px;
+  font-weight: bolder;
+  padding: 20px 10px;
+
+}
+
+  .nav li {
+    display: inline;
+  }
+.aboutpage {
+  background-color: #75ce66;
+}
