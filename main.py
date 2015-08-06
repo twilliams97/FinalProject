@@ -44,6 +44,19 @@ class ForumHandler(webapp2.RequestHandler):
         # Create a new Student and put it in the datastore
         post = Post(title=title, content=content, author=author)
         post.put()
+        #
+        #         name_value = self.request.get('name')
+        # exclamations_value = self.request.get('exclamations')
+        #
+        # # If there is no 'name' parameter, it is an empty string.
+        # # An empty string in Python is "falsey" and therefore returns false.
+        # # We set name_value to 'world' if there's no query parameter.
+        #
+        # self.response.write('<!DOCTYPE html>')
+        # self.response.write('<title>{}</title>').format(title)
+        # self.response.write('<h1>{}</h1>').format(title)
+        # self.response.write('<h2>{}</h2>').format(author)
+        # self.response.write('<p>{}</p>'.format(content)
         # Redirect to the main handler that will render the template
         self.redirect('/forum')
 
@@ -108,6 +121,25 @@ class SASYHandler(webapp2.RequestHandler):
     def get(self):
         template = JINJA_ENVIRONMENT.get_template('summer_after_senior_year.html')
         self.response.out.write(template.render())
+class ShowpostsHandler(webapp2.RequestHandler):
+    def get(self):
+        query = Post.query()
+        post_data = query.fetch()
+                # Pass the data to the template
+        template_values = {
+                'posts' : post_data
+        }
+        template = JINJA_ENVIRONMENT.get_template('showposts.html')
+        self.response.out.write(template.render(template_values))
+    def post(self):
+            # Get the student name and university from the form
+        title = self.request.get('title')
+        content = self.request.get('content')
+        author = self.request.get('author')
+            # Create a new Student and put it in the datastore
+        post = Post(title=title, content=content, author=author)
+        post.put()
+        self.redirect('/showposts')
 app = webapp2.WSGIApplication([
     ('/', TimelineHandler),
     ('/about', AboutHandler),
@@ -118,6 +150,6 @@ app = webapp2.WSGIApplication([
     ('/senioryearfall', SYFHandler),
     ('/senioryearspring', SYSHandler),
     ('/summeraftersenioryear', SASYHandler),
-    # ('/SeniorYearSpring.html', TimelineHandler),
-    ('/scholarships', ScholarshipHandler)
+    ('/scholarships', ScholarshipHandler),
+    ('/showposts', ShowpostsHandler)
 ], debug=True)

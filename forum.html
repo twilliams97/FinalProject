@@ -1,9 +1,40 @@
 <!DOCTYPE html>
 {% autoescape true %}
 <html>
+<head>
+  <link href="css/forum.css" link rel = "stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+</head>
   <body>
+
     <h2>Posts</h2>
     <form id="forum"action="/forum" method="post">
+
+  <div class="nav">
+  	<div class="container">
+  		<ul class="pull-left">
+  			<li><a href="/" >Home</a></li>
+  			<li><a href= "scholarships"> Scholarships</a></li>
+  			<li><a href="about">About</a></li>
+  			<li><a href ="forum">Advice Forum</a></li>
+  		</ul>
+  		</ul>
+  	</div>
+  </div>
+
+      <div class="jumbotron">
+        <div class= "aboutpage">
+          <div class="container">
+          <h1 id="title" color="white">Advice Forum</h1>
+          </div>
+        </div>
+    </div>
+
+
+<div class= "background">
+    <h2s>Posts</h2>
+    <form action="/forum" method="post">
+
       <div>Title: <input name="title"></input></div>
       <div>Author: <input name="author"></input></div>
       <div>Content: <textarea name="content" rows="3" cols="60"></textarea></div>
@@ -11,13 +42,16 @@
       <A HREF="javascript:history.go(0)">Refresh page to see post</A>
     </form>
     {% for post in posts %}
+
+      <a href= "/showposts "> {{post.title}}</a>
       <h3>Title: {{ post.title }}</h3>
       <h4>Author: {{ post.author }}</h4>
       <h5>{{ post.date.strftime("%d/%m/%y") }}</h5>
+
       <p>{{ post.content }}</p>
       {% for comment_key in post.comment_keys %}
         <h3>Commenter: {{ comment_key.get().name }}</h3>
-        <!-- <h5> comment_key.date.strftime("%d/%m/%y") }}</h5> -->
+        <h5> comment_key.date.strftime("%d/%m/%y") }}</h5>
         <p>{{ comment_key.get().comment }}</p>
       {% endfor %}
       <form action="/comment" method="post">
@@ -35,6 +69,7 @@
       <div>Content: <textarea name="content" rows="3" cols="60"></textarea></div>
       <div><input type="submit" value="Add Post"></div>
     </form> -->
+  </div>
   </body>
 </html>
 {% endautoescape %}
