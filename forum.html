@@ -6,6 +6,10 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 </head>
   <body>
+
+    <h2>Posts</h2>
+    <form id="forum"action="/forum" method="post">
+
   <div class="nav">
   	<div class="container">
   		<ul class="pull-left">
@@ -28,6 +32,7 @@
 
 
 <div class= "background">
+<<<<<<< HEAD
     <h2>Posts</h2>
 
       {% for post in posts %}
@@ -41,6 +46,7 @@
 <div>Author: <input name="author"></input><div>
 <div>Content: <textarea name="content" rows="3" cols="60"></textarea></div>
 <div><input type="submit" value="Add Post"></div>
+<A HREF="javascript:history.go(0)">Refresh page to see post</A>
 
   </div>
   </body>

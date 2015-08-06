@@ -10,30 +10,23 @@
     display: inline;
   }
 .aboutpage {
-  background-color: #75ce66;
+  background-color: #c03b44;
+  color: white;
 }
 
-#title {
+#tips {
   color: black;
-
+  font-family: 'questrial' serif;
+  font-size: 20px;
+  text-align: justify;
 }
-
+.advice {
+  margin-left: 15%;
+  margin-right:15%
+}
 .jumbotron h1 {
 
   font-size: 99px;
   font-family: 'Merriweather' serif;
   text-align: center;
-  text-decoration: underline;
-}
-
-.jumbotron p {
-  font-size: 20px;
-  color: white;
-  font-family: 'Merriweather' serif;
-}
-
-.founders {
-  text-align: justify;
-  color: navy;
-  font-family: 'Merriwearher' sans-serif;
 }

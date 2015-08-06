@@ -1,54 +1,4 @@
-/*#scholarship {
-  transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg);
-}*/
-
-#anni{
-display:none
-}
-.nav a {
-  color: navy;
-  font-size: 15px;
-  font-weight: bolder;
-  padding: 20px 10px;
-}
-
-  .nav li {
-    display: inline;
-  }
-.aboutpage {
-  background-color: lightgreen;
-}
-
-/*#scholarship {
-  color: black;*/
-
-.jumbotron h1 {
-  color: blue;
-  font-size: 49px;
-  font-family: 'Questrial', sans-serif;
-  text-align: center;
-  text-decoration: underline;
-}
-
-.jumbotron p {
-  font-size: 15px;
-  color: white;
-  font-family: sans-serif;
-
-}
-
-.scholarships {
-  text-align: justify;
-  font-size: 15px;
-  font-family: 'Merriweather' serif;
-
-}
-.col-md-6 {
-  font-size: 20px
-}
-
-.button {
+#forum {
 	-moz-box-shadow:inset 0px 1px 0px 0px #a4e271;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #a4e271;
 	box-shadow:inset 0px 1px 0px 0px #a4e271;
@@ -74,7 +24,7 @@ display:none
 	text-decoration:none;
 	text-shadow:0px 1px 0px #528009;
 }
-.button:hover {
+.forum:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77a809), color-stop(1, #89c403));
 	background:-moz-linear-gradient(top, #77a809 5%, #89c403 100%);
 	background:-webkit-linear-gradient(top, #77a809 5%, #89c403 100%);
@@ -84,7 +34,7 @@ display:none
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77a809', endColorstr='#89c403',GradientType=0);
 	background-color:#77a809;
 }
-.button:active {
+.forum:active {
 	position:relative;
 	top:1px;
 }
