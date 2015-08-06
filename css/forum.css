@@ -1,0 +1,36 @@
+.nav a {
+color: navy;
+font-weight: bolder;
+padding: 20px 10px;
+}
+.nav li {
+  display: inline;
+}
+.background {
+  background-color: aliceblue;
+}
+
+#title {
+  color: white;
+}
+.jumbotron h1 {
+
+  font-size: 99px;
+  font-family: 'Merriweather' serif;
+  text-align: center;
+  /*text-decoration: underline;*/
+}
+
+.aboutpage {
+  background-color: midnightblue;
+}
+
+#titlestyle {
+  font-family: 'Merriweather' serif;
+  color: navy;
+  text-indent: 20px;
+}
+#authorstyle  {
+  font-family: 'Merriweather' serif;
+  color: navy;
+}
