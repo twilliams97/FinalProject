@@ -1,3 +1,10 @@
+
+.post-design {
+  border: 5px solid #75ce66;
+  text-align: center;
+  background-color: white;
+  width: 1000px;
+}
 .nav a {
 color: navy;
 font-weight: bolder;
@@ -8,13 +15,26 @@ padding: 20px 10px;
   display: inline;
 }
 .background {
-  background-color: aliceblue ;
+  background-color: white;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 #advice {
-  text-align: center;
+  text-align: justify;
+  font-size: 25px;
 }
 #title {
   color: white;
+}
+#nombre {
+  font-size: 25px;
+  font-family: 'questrial', serif;
+  color: black;
+
+}
+#author {
+  font-size: 25px;
+  font-family: 'Questrial', serif;
 }
 .jumbotron h1 {
 
