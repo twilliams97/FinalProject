@@ -68,7 +68,7 @@ class CommentHandler(webapp2.RequestHandler):
         comment_key = db_comment.put()
 
         # Find the post that was commented on using the hidden post_url_key
-        post_url_key = self.request.get('post_url_key')
+        post_url_key = self.request.get('id')
         post_key = ndb.Key(urlsafe=post_url_key)
         post = post_key.get()
 
