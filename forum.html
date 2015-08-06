@@ -38,14 +38,13 @@
         <h3>Title: {{ post.title }}</h3>
         <h3>Author: {{ post.author }}</h3>
         <h5>{{ post.date.strftime("%d/%m/%y") }}</h5>
-        <a href="showposts">Link to post</a>
-            {% endfor %}
+        <a href="/showposts?id={{post.key.urlsafe()}}">Link to post</a>
+        {% endfor %}
 <form action="/forum" method="post">
 <div>Title: <input name="title"></input></div>
 <div>Author: <input name="author"></input><div>
 <div>Content: <textarea name="content" rows="3" cols="60"></textarea></div>
 <div><input type="submit" value="Add Post"></div>
-<A HREF="javascript:history.go(0)">Refresh page to see post</A>
 
   </div>
   </body>
