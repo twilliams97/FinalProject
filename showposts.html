@@ -25,22 +25,23 @@
         <h4>By {{ post.author }}</h3>
         <h5>{{ post.date.strftime("%d/%m/%y") }}</h5>
         <p>{{ post.content }}</p>
+     </div>
         {% for comment_key in post.comment_keys %}
           <h3>Commenter: {{ comment_key.get().name }}</h3>
           <!-- <h5> comment_key.date.strftime("%d/%m/%y") }}</h5> -->
           <p>{{ comment_key.get().comment }}</p>
-      </div>
+
     {% endfor %}
-    <!-- This form is to create a new comment, it needs to send to '/comment using the post method' -->
-    <form action="/showposts" method="post">
-      <!-- It needs to take inputs for the commenters name and comment -->
+
+    <form action="/showposts?id={{ post.key.urlsafe() }}" method="post">
+
 
         <div>Name: <input name="name"></input></div>
         <div>Comment: <input name="comment"></input></div>
-        <!-- This next line is a sneaky way to make sure we know what post we are talking about -->
         <div><input type="hidden" name="post_url_key" value="{{ post.key.urlsafe() }}"></div>
         <div><input type="submit" value="Leave Comment"></div>
-    </form>
+
+     </form>
     <hr>
   {% endfor %}
   </body>
