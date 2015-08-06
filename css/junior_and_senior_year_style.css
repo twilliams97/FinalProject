@@ -10,5 +10,23 @@
     display: inline;
   }
 .aboutpage {
-  background-color: #75ce66;
+  background-color: green;
+  color: white;
+}
+
+#tips {
+  color: black;
+  font-family: 'questrial' serif;
+  font-size: 20px;
+  text-align: justify;
+}
+.advice {
+  margin-left: 15%;
+  margin-right:15%
+}
+.jumbotron h1 {
+
+  font-size: 99px;
+  font-family: 'Merriweather' serif;
+  text-align: center;
 }
