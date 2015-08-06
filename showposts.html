@@ -1,26 +1,45 @@
 <!DOCTYPE html>
 {% autoescape true %}
 <html>
-  <body>
-  <title>Post</title>
+  <head>
+    <title>Post</title>
+  </head>
+<body>
+  <div class="nav">
+    <div class="container">
+      <ul class="pull-left">
+        <li><a href="/" >Home</a></li>
+        <li><a href= "scholarships"> Scholarships</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href ="forum">Advice Forum</a></li>
+      </ul>
 
-  {% for post in posts %}
-    <h3>Title: {{ post.title }}</h3>
-    <h5>{{ post.date.strftime("%d/%m/%y") }}</h5>
-    <p>{{ post.content }}</p>
-    {% for comment_key in post.comment_keys %}
-      <h3>Commenter: {{ comment_key.get().name }}</h3>
-      <!-- <h5> comment_key.date.strftime("%d/%m/%y") }}</h5> -->
-      <p>{{ comment_key.get().comment }}</p>
+      </ul>
+    </div>
+  </div>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/showposts-style.css" link rel = "stylesheet">
+    {% for post in posts %}
+      <div class="entire-post-design">
+        <h2> {{ post.title }}</h2>
+        <h4>By {{ post.author }}</h3>
+        <h5>{{ post.date.strftime("%d/%m/%y") }}</h5>
+        <p>{{ post.content }}</p>
+        {% for comment_key in post.comment_keys %}
+          <h3>Commenter: {{ comment_key.get().name }}</h3>
+          <!-- <h5> comment_key.date.strftime("%d/%m/%y") }}</h5> -->
+          <p>{{ comment_key.get().comment }}</p>
+      </div>
     {% endfor %}
     <!-- This form is to create a new comment, it needs to send to '/comment using the post method' -->
     <form action="/showposts" method="post">
       <!-- It needs to take inputs for the commenters name and comment -->
-      <div>Name: <input name="name"></input></div>
-      <div>Comment: <input name="comment"></input></div>
-      <!-- This next line is a sneaky way to make sure we know what post we are talking about -->
-      <div><input type="hidden" name="post_url_key" value="{{ post.key.urlsafe() }}">
-      <div><input type="submit" value="Leave Comment"></div>
+
+        <div>Name: <input name="name"></input></div>
+        <div>Comment: <input name="comment"></input></div>
+        <!-- This next line is a sneaky way to make sure we know what post we are talking about -->
+        <div><input type="hidden" name="post_url_key" value="{{ post.key.urlsafe() }}"></div>
+        <div><input type="submit" value="Leave Comment"></div>
     </form>
     <hr>
   {% endfor %}
