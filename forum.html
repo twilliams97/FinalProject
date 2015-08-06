@@ -32,21 +32,24 @@
 
 
 <div class= "background">
-<h2>Posts</h2>
+<!-- <h2>Posts</h2> -->
 <p id= "advice"> Do you have questions about the college process? Do you want to offer advice to students in regards of the college process? Take this
-  opportunity to write a blog and talk about your journey, challenges, etc? </p>
+  opportunity to write a blog and talk about your journey, challenges, etc? </p> <br> <br>
 
       {% for post in posts %}
-        <h3>Title: {{ post.title }}</h3>
-        <h3>Author: {{ post.author }}</h3>
-        <h5>{{ post.date.strftime("%d/%m/%y") }}</h5>
-        <a href="/showposts?id={{post.key.urlsafe()}}">Link to post</a>
+      <div class ="post-design">
+        <h3 id ="nombre"><a href="/showposts?id={{post.key.urlsafe()}}">Title: {{ post.title }}</a></h3>
+        <h3 id= "nombre">Author: {{ post.author }}</h3>
+        <h5 id= "nombre">{{ post.date.strftime("%d/%m/%y") }}</h5>
+      </div>
         {% endfor %}
+
 <form action="/forum" method="post">
-<div>Title: <input name="title"></input></div>
-<div>Author: <input name="author"></input><div>
-<div>Content: <textarea name="content" rows="3" cols="60"></textarea></div>
+<div id="author">Title: <input name="title"></input></div>
+<div id= "author">Author: <input name="author"></input><div>
+<div id= "author">Content: <textarea name="content" rows="3" cols="60"></textarea></div>
 <div><input type="submit" value="Add Post"></div>
+
 
   </div>
   </body>
