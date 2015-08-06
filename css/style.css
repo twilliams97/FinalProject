@@ -20,16 +20,17 @@ h1 {
   letter-spacing: -6px;
   margin-bottom: 10px;
   position: relative;
-  top: 30px;
+  top: 55px;
 }
 
 #title12{
-  font-size: 150px;
+  font-size: 90px;
   background: url(http://trentwalton.com/bgclip/img/paint.png) repeat, white;
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
 	-webkit-animation-name: masked-animation;
 	-webkit-animation-duration: 40s;
+  font-family: 'Questrial', sans-serif;
 	-webkit-animation-iteration-count: infinite;
 	-webkit-animation-timing-function: linear;
 }
