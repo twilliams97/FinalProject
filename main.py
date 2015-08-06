@@ -49,14 +49,16 @@ class ForumHandler(webapp2.RequestHandler):
 
 class CommentHandler(webapp2.RequestHandler):
     def get(self):
+        # Get all of the student data from the datastore
         query = Post.query()
         post_data = query.fetch()
-                # Pass the data to the template
+        # Pass the data to the template
         template_values = {
             'posts' : post_data
         }
         template = JINJA_ENVIRONMENT.get_template('showposts.html')
         self.response.write(template.render(template_values))
+
     def post(self):
         # Create the comment in the Database
         name = self.request.get('name')
@@ -68,13 +70,16 @@ class CommentHandler(webapp2.RequestHandler):
         comment_key = db_comment.put()
 
         # Find the post that was commented on using the hidden post_url_key
-        post_url_key = self.request.get('id')
+        post_url_key = self.request.get('post_url_key')
         post_key = ndb.Key(urlsafe=post_url_key)
         post = post_key.get()
 
         # Attach the comment to that post
         post.comment_keys.append(comment_key)
         post.put()
+
+        self.redirect('/showposts')
+
 
 
         self.redirect('/showposts')
