@@ -11,13 +11,16 @@
       <A HREF="javascript:history.go(0)">Refresh page to see post</A>
     </form>
     {% for post in posts %}
+
+      <a href= "/showposts "> {{post.title}}</a>
       <h3>Title: {{ post.title }}</h3>
       <h4>Author: {{ post.author }}</h4>
       <h5>{{ post.date.strftime("%d/%m/%y") }}</h5>
+
       <p>{{ post.content }}</p>
       {% for comment_key in post.comment_keys %}
         <h3>Commenter: {{ comment_key.get().name }}</h3>
-        <!-- <h5> comment_key.date.strftime("%d/%m/%y") }}</h5> -->
+        <h5> comment_key.date.strftime("%d/%m/%y") }}</h5>
         <p>{{ comment_key.get().comment }}</p>
       {% endfor %}
       <form action="/comment" method="post">
