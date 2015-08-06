@@ -7,7 +7,7 @@
 </head>
   <body>
 
-    <h2>Posts</h2>
+
     <form id="forum"action="/forum" method="post">
 
   <div class="nav">
@@ -33,6 +33,8 @@
 
 <div class= "background">
 <h2>Posts</h2>
+<p id= "advice"> Do you have questions about the college process? Do you want to offer advice to students in regards of the college process? Take this
+  opportunity to write a blog and talk about your journey, challenges, etc? </p>
 
       {% for post in posts %}
         <h3>Title: {{ post.title }}</h3>
