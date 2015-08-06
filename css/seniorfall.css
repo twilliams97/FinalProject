@@ -1,0 +1,32 @@
+.nav a {
+  color: navy;
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 20px 10px;
+
+}
+
+  .nav li {
+    display: inline;
+  }
+.aboutpage {
+  background-color: #f0ca45;
+  color: white;
+}
+
+#tips {
+  color: black;
+  font-family: 'questrial' serif;
+  font-size: 20px;
+  text-align: justify;
+}
+.advice {
+  margin-left: 15%;
+  margin-right:15%
+}
+.jumbotron h1 {
+
+  font-size: 99px;
+  font-family: 'Merriweather' serif;
+  text-align: center;
+}
