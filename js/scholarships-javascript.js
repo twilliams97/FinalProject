@@ -24,3 +24,11 @@ $(document).ready(function(){
     });
   })
 });
+
+$(document).ready(function(){
+    $("#scholarship").hover(function(){
+        $(this).text("More Money!!!");
+        }, function(){
+        $(this).text("Scholarships!");
+    });
+});
