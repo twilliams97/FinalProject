@@ -8,7 +8,7 @@ display:none
 }
 .nav a {
   color: navy;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: bolder;
   padding: 20px 10px;
 }
@@ -20,23 +20,14 @@ display:none
   background-color: lightgreen;
 }
 
-/*#scholarship {
-  color: black;*/
-
 .jumbotron h1 {
   color: blue;
   font-size: 49px;
-  font-family: 'Questrial', sans-serif;
+  font-family: 'Merriweather', sans-serif;
   text-align: center;
   text-decoration: underline;
 }
 
-.jumbotron p {
-  font-size: 15px;
-  color: white;
-  font-family: sans-serif;
-
-}
 
 .scholarships {
   text-align: justify;

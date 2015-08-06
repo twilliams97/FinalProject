@@ -53,6 +53,11 @@
   background-color: #75ce66;
   color: white;
 }
+.jumbotron p {
+  font-size: 20px;
+  
+  font-family: 'Merriweather' serif;
+}
 
 #tips {
   color: black;
