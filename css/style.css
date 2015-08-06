@@ -34,6 +34,23 @@ h1 {
 	-webkit-animation-iteration-count: infinite;
 	-webkit-animation-timing-function: linear;
 }
+
+#final-section-color{
+background: #f0ca45;
+}
+
+#senior-fall-color{
+background: #f0ca45;
+}
+
+#senior-spring-color{
+background: #75ce66;
+}
+
+#summer-after-color{
+background: #c03b44;
+}
+
 @-webkit-keyframes masked-animation {
 	0% {background-position: left bottom;}
 	100% {background-position: right bottom;}
