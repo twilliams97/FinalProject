@@ -8,9 +8,11 @@ padding: 20px 10px;
   display: inline;
 }
 .background {
-  background-color: ;
+  background-color: aliceblue ;
 }
-
+#advice {
+  text-align: center;
+}
 #title {
   color: white;
 }
