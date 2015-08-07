@@ -27,8 +27,11 @@ font-size: 18px;
 
 #somewhat-post-design{
   background-image: url("../img/road-to-college.jpg");
+  margin: auto;
   width: 90%;
+  padding: 10px;
 }
+
 #another-id {
   text-align: center;
   width: 1000px;

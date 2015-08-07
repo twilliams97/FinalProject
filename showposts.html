@@ -21,7 +21,8 @@
     </div>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/showposts-style.css" link rel = "stylesheet">
-    <div id="somewhat-post-design">
+<div id="post-design">
+  <div id="somewhat-post-design">
       <!-- <img src="img/Road To College2.jpg" alt="Icon" style="width:1000px;height:1000px;"> -->
     {% for post in posts %}
       <div class="entire-post-design">
@@ -32,13 +33,14 @@
           <p id="font">{{ post.content }}</p>
         </div>
       </div>
-    </div>
 
+</div>
       {% for comment_key in post.comment_keys %}
         <h3>Commenter: {{ comment_key.get().name }}</h3>
         <!-- <h5> comment_key.date.strftime("%d/%m/%y") }}</h5> -->
         <p>{{ comment_key.get().comment }}</p>
-      {% endfor %}
+
+    {% endfor %}
 
       <form action="/showposts?id={{ post.key.urlsafe() }}" method="post">
 

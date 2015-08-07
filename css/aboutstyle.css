@@ -17,24 +17,17 @@
 
 #title {
   color: black;
-  font-size: 120px;
-  background: url(http://trentwalton.com/bgclip/img/paint.png) repeat, white;
-  font-family: 'Handlee', cursive;
-  font-weight: bolder;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-animation-name: masked-animation;
-  -webkit-animation-duration: 40s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
+  font-size: 90px;
+  font-family: 'Merriweather' serif;
 }
+
 
 .jumbotron h1 {
 
   font-size: 99px;
   font-family: 'Merriweather' serif;
   text-align: center;
-  text-decoration: underline;
+
 }
 
 .jumbotron p {
