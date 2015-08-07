@@ -1,19 +1,22 @@
 
 .post-design {
-  border: 5px solid #75ce66;
+  border: 10px solid #75ce66;
   text-align: center;
   margin-top: 5px;
   background-color: #D8F1D4 ;
   width: 1000px;
   border-radius: 50px;
-
+  box-shadow: inset 3px 4px 5px #75ce66;
 }
+
 .textbox {
   margin-top: 10px;
   margin-bottom: 100px;
-  border: 5px solid #75ce66;
+  border: 10px solid #c03b44;
   text-align: center;
   width: 1000px;
+  border-radius: 20px;
+  background-color: #E6B1B4;
 }
 .nav a {
 color: navy;
