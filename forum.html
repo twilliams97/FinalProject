@@ -26,6 +26,8 @@
         <div class= "aboutpage">
           <div class="container">
           <h1 id="title" color="white">Advice Forum</h1>
+          <p id= "advice"> Do you have questions about the college process? Do you want to offer advice to students in regards of the college process? Take this
+            opportunity to write a blog and talk about your journey, challenges, etc? </p> <br> <br>
           </div>
         </div>
     </div>
@@ -33,8 +35,6 @@
 
 <div class= "background">
 <!-- <h2>Posts</h2> -->
-<p id= "advice"> Do you have questions about the college process? Do you want to offer advice to students in regards of the college process? Take this
-  opportunity to write a blog and talk about your journey, challenges, etc? </p> <br> <br>
 
       {% for post in posts %}
       <div class ="post-design">
@@ -45,12 +45,13 @@
         {% endfor %}
 
 <form action="/forum" method="post">
+<div class ="textbox"> 
 <div id="author">Title: <input name="title"></input></div>
 <div id= "author">Author: <input name="author"></input><div>
 <div id= "author">Content: <textarea name="content" rows="3" cols="60"></textarea></div>
 <div><input type="submit" value="Add Post"></div>
 
-
+</div>
   </div>
   </body>
 </html>

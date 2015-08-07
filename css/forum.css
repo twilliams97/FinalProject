@@ -2,11 +2,19 @@
 .post-design {
   border: 5px solid #75ce66;
   text-align: center;
-  background-color: white;
+  margin-top: 5px;
+  background-color: #D8F1D4 ;
   width: 1000px;
-  border-radius: 16px
-}
+  border-radius: 50px;
 
+}
+.textbox {
+  margin-top: 10px;
+  margin-bottom: 100px;
+  border: 5px solid #75ce66;
+  text-align: center;
+  width: 1000px;
+}
 .nav a {
 color: navy;
 font-weight: bolder;
@@ -23,7 +31,11 @@ padding: 20px 10px;
 }
 #advice {
   text-align: justify;
-  font-size: 25px;
+  font-size: 20px;
+  color: white;
+  font-family: 'Merriweather', serif;
+  margin-left: 10%;
+  margin-right: 10%
 }
 #title {
   color: white;
