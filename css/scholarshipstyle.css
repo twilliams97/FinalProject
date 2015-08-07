@@ -27,7 +27,12 @@ display:none
   text-align: center;
   text-decoration: underline;
 }
-
+#school {
+  font-family: 'Merriweather', serif;
+  font-size: 20px;
+  color: white;
+  text-align: justify;
+}
 
 .scholarships {
   text-align: justify;

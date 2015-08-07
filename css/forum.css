@@ -4,7 +4,9 @@
   text-align: center;
   background-color: white;
   width: 1000px;
+  border-radius: 16px
 }
+
 .nav a {
 color: navy;
 font-weight: bolder;
