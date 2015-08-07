@@ -50,11 +50,15 @@ class ForumHandler(webapp2.RequestHandler):
 class CommentHandler(webapp2.RequestHandler):
     def get(self):
         # Get all of the student data from the datastore
-        query = Post.query()
-        post_data = query.fetch()
+        post_id_key = self.request.get("id")
+        post_key = ndb.Key(urlsafe=post_id_key)
+        shown_post = post_key.get()
+        shown_post.put()
+
+        shown_post_array = [shown_post]
         # Pass the data to the template
         template_values = {
-            'posts' : post_data
+            'posts' : shown_post_array
         }
         template = JINJA_ENVIRONMENT.get_template('showposts.html')
         self.response.write(template.render(template_values))
@@ -78,11 +82,8 @@ class CommentHandler(webapp2.RequestHandler):
         post.comment_keys.append(comment_key)
         post.put()
 
-        self.redirect('/showposts')
+        self.redirect('/showposts?id=' + post.key.urlsafe())
 
-
-
-        self.redirect('/showposts')
 
 class ScholarshipHandler(webapp2.RequestHandler):
     def get(self):
