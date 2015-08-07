@@ -5,45 +5,53 @@
     <title>Post</title>
   </head>
 <body>
-  <div class="nav">
-    <div class="container">
-      <ul class="pull-left">
-        <li><a href="/" >Home</a></li>
-        <li><a href= "scholarships"> Scholarships</a></li>
-        <li><a href="about">About</a></li>
-        <li><a href ="forum">Advice Forum</a></li>
-      </ul>
 
-      </ul>
+    <div class="nav">
+      <div class="container">
+        <ul class="pull-left">
+          <li><a href="/" >Home</a></li>
+          <li><a href= "scholarships"> Scholarships</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href ="forum">Advice Forum</a></li>
+        </ul>
+
+        </ul>
+
+      </div>
     </div>
-  </div>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/showposts-style.css" link rel = "stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/showposts-style.css" link rel = "stylesheet">
+    <div id="somewhat-post-design">
+      <!-- <img src="img/Road To College2.jpg" alt="Icon" style="width:1000px;height:1000px;"> -->
     {% for post in posts %}
       <div class="entire-post-design">
-        <h2> {{ post.title }}</h2>
-        <h4>By {{ post.author }}</h3>
-        <h5>{{ post.date.strftime("%d/%m/%y") }}</h5>
-        <p>{{ post.content }}</p>
-     </div>
-        {% for comment_key in post.comment_keys %}
-          <h3>Commenter: {{ comment_key.get().name }}</h3>
-          <!-- <h5> comment_key.date.strftime("%d/%m/%y") }}</h5> -->
-          <p>{{ comment_key.get().comment }}</p>
+        <div id="another-id">
+          <h2> {{ post.title }}</h2>
+          <h4>By {{ post.author }}</h3>
+          <h5>{{ post.date.strftime("%d/%m/%y") }}</h5>
+          <p id="font">{{ post.content }}</p>
+        </div>
+      </div>
+    </div>
 
+      {% for comment_key in post.comment_keys %}
+        <h3>Commenter: {{ comment_key.get().name }}</h3>
+        <!-- <h5> comment_key.date.strftime("%d/%m/%y") }}</h5> -->
+        <p>{{ comment_key.get().comment }}</p>
+      {% endfor %}
+
+      <form action="/showposts?id={{ post.key.urlsafe() }}" method="post">
+
+        <div id="center-comments">
+          <div id="font-change">Name: <input name="name"></input></div>
+          <div id="font-change">Comment: <input name="comment"></input></div>
+          <div><input type="hidden" name="post_url_key" value="{{ post.key.urlsafe() }}"></div>
+          <div><input type="submit" value="Leave Comment"></div>
+        </div>
+       </form>
+      <hr>
     {% endfor %}
-
-    <form action="/showposts?id={{ post.key.urlsafe() }}" method="post">
-
-
-        <div>Name: <input name="name"></input></div>
-        <div>Comment: <input name="comment"></input></div>
-        <div><input type="hidden" name="post_url_key" value="{{ post.key.urlsafe() }}"></div>
-        <div><input type="submit" value="Leave Comment"></div>
-
-     </form>
-    <hr>
-  {% endfor %}
+    </div>
   </body>
 </html>
 {% endautoescape %}

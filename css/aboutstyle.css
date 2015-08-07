@@ -1,4 +1,5 @@
 
+
 .nav a {
   color: navy;
   font-size: 20px;
@@ -16,7 +17,16 @@
 
 #title {
   color: black;
-
+  font-size: 120px;
+  background: url(http://trentwalton.com/bgclip/img/paint.png) repeat, white;
+  font-family: 'Handlee', cursive;
+  font-weight: bolder;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-animation-name: masked-animation;
+  -webkit-animation-duration: 40s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
 }
 
 .jumbotron h1 {
