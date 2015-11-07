@@ -45,11 +45,19 @@
         {% endfor %}
 
 <form action="/forum" method="post">
-<div class ="textbox"> 
+<div class ="textbox">
 <div id="author">Title: <input name="title"></input></div>
 <div id= "author">Author: <input name="author"></input><div>
 <div id= "author">Content: <textarea name="content" rows="3" cols="60"></textarea></div>
-<div><input type="submit" value="Add Post"></div>
+<button onclick="location.reload(true)">See post</button>
+
+
+<!--
+<script>
+function myFunction() {
+    location.reload();
+}
+</script> -->
 
 </div>
   </div>
